@@ -4,7 +4,7 @@ const path = require('path');
 
 const PAGE_ID = process.env.FB_PAGE_ID;
 const ACCESS_TOKEN = process.env.FB_ACCESS_TOKEN;
-const WEBSITE_URL = 'https://shayaridil.com'; // Update with your actual domain
+const WEBSITE_URL = 'https://Shayariwale.in'; // Update with your actual domain
 
 // Hashtag mapping per category
 const CATEGORY_HASHTAGS = {
