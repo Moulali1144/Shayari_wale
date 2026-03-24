@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
@@ -24,7 +24,6 @@ const CATEGORY_HASHTAGS = {
 };
 
 function getTodayIndex(total) {
-  // Use day-of-year so each day gets a different shayari, cycling through all
   const now = new Date();
   const start = new Date(now.getFullYear(), 0, 0);
   const diff = now - start;
@@ -34,50 +33,42 @@ function getTodayIndex(total) {
 
 function buildPostMessage(shayari) {
   const hashtags = CATEGORY_HASHTAGS[shayari.category] || '#Shayari #ShayariDil #Poetry';
-
-  // Clean up escaped newlines in text
   const text = shayari.text.replace(/\\n/g, '\n').trim();
-
-  const message = `${text}
-
-✍️ — ${shayari.author || 'ShayariDil'}
-
-🌐 Read more: ${WEBSITE_URL}
-
-${hashtags}`;
-
-  return message;
+  return `${text}\n\n✍️ — ${shayari.author || 'ShayariDil'}\n\n🌐 Read more: ${WEBSITE_URL}\n\n${hashtags}`;
 }
 
-async function getImageUrl(shayari) {
-  // Build absolute image URL from the relative path stored in JSON
-  const imagePath = shayari.image; // e.g. /images/shayaris/xxx.webp
-  return `${WEBSITE_URL}${imagePath}`;
-}
+function httpsPost(url, data) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify(data);
+    const urlObj = new URL(url);
+    const options = {
+      hostname: urlObj.hostname,
+      path: urlObj.pathname + urlObj.search,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+      },
+    };
 
-async function postToFacebook(message, imageUrl) {
-  // Post with photo (uses /photos endpoint which creates a post with image)
-  const url = `https://graph.facebook.com/v19.0/${PAGE_ID}/photos`;
+    const req = https.request(options, (res) => {
+      let raw = '';
+      res.on('data', chunk => raw += chunk);
+      res.on('end', () => {
+        try {
+          const parsed = JSON.parse(raw);
+          if (parsed.error) reject(new Error(`FB API Error: ${JSON.stringify(parsed.error)}`));
+          else resolve(parsed);
+        } catch (e) {
+          reject(new Error(`Failed to parse response: ${raw}`));
+        }
+      });
+    });
 
-  const body = {
-    url: imageUrl,
-    caption: message,
-    access_token: ACCESS_TOKEN,
-  };
-
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+    req.on('error', reject);
+    req.write(body);
+    req.end();
   });
-
-  const data = await response.json();
-
-  if (!response.ok || data.error) {
-    throw new Error(`Facebook API error: ${JSON.stringify(data.error || data)}`);
-  }
-
-  return data;
 }
 
 async function main() {
@@ -86,7 +77,6 @@ async function main() {
     process.exit(1);
   }
 
-  // Load shayaris
   const shayarisPath = path.join(__dirname, '../../app/public/shayaris.json');
   const shayaris = JSON.parse(fs.readFileSync(shayarisPath, 'utf-8'));
 
@@ -96,12 +86,16 @@ async function main() {
   console.log(`Posting shayari #${index}: [${shayari.category}] ${shayari.id}`);
 
   const message = buildPostMessage(shayari);
-  const imageUrl = await getImageUrl(shayari);
+  const imageUrl = `${WEBSITE_URL}${shayari.image}`;
 
   console.log('Image URL:', imageUrl);
   console.log('Message preview:\n', message.substring(0, 200));
 
-  const result = await postToFacebook(message, imageUrl);
+  const result = await httpsPost(
+    `https://graph.facebook.com/v19.0/${PAGE_ID}/photos`,
+    { url: imageUrl, caption: message, access_token: ACCESS_TOKEN }
+  );
+
   console.log('Posted successfully! Post ID:', result.id || result.post_id);
 }
 
