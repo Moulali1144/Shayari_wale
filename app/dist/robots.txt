@@ -1,0 +1,75 @@
+# robots.txt — shayariwale.in
+# Updated: 2026-03-15
+
+# ═══ ALL BOTS ═══
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /assets/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.css$
+Allow: /*.js$
+Disallow: /admin/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /*.json$
+Crawl-delay: 1
+
+# ═══ GOOGLE ═══
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# ═══ BING ═══
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+# ═══ SOCIAL CRAWLERS (allow for OG previews) ═══
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ═══ BLOCK SCRAPERS & SPAM BOTS ═══
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# ═══ SITEMAP ═══
+Sitemap: https://shayariwale.in/sitemap.xml

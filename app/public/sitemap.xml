@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ═══ HOMEPAGE ═══ -->
+  <url>
+    <loc>https://shayariwale.in/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://shayariwale.in/"/>
+    <xhtml:link rel="alternate" hreflang="hi"        href="https://shayariwale.in/"/>
+    <xhtml:link rel="alternate" hreflang="ta"        href="https://shayariwale.in/"/>
+    <xhtml:link rel="alternate" hreflang="te"        href="https://shayariwale.in/"/>
+    <xhtml:link rel="alternate" hreflang="gu"        href="https://shayariwale.in/"/>
+    <xhtml:link rel="alternate" hreflang="mr"        href="https://shayariwale.in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shayariwale.in/"/>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/hero-bg.jpg</image:loc>
+      <image:title>Shayari Wale – Best Shayari Collection</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══ CATEGORY PAGES ═══ -->
+
+  <!-- Love / Romantic -->
+  <url>
+    <loc>https://shayariwale.in/?category=romantic</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/romantic-category.jpg</image:loc>
+      <image:title>Romantic Love Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Sad -->
+  <url>
+    <loc>https://shayariwale.in/?category=sad</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/sad-category.jpg</image:loc>
+      <image:title>Sad Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Attitude -->
+  <url>
+    <loc>https://shayariwale.in/?category=attitude</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Friendship -->
+  <url>
+    <loc>https://shayariwale.in/?category=friendship</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/friendship-category.jpg</image:loc>
+      <image:title>Friendship Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Birthday -->
+  <url>
+    <loc>https://shayariwale.in/?category=birthday</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/birthday-category.jpg</image:loc>
+      <image:title>Happy Birthday Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Marriage Anniversary -->
+  <url>
+    <loc>https://shayariwale.in/?category=marriageanniversary</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/marriage-category.jpg</image:loc>
+      <image:title>Marriage Anniversary Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Marriage Funny -->
+  <url>
+    <loc>https://shayariwale.in/?category=marriagefunny</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Ganesh Puja -->
+  <url>
+    <loc>https://shayariwale.in/?category=ganesh</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/ganesh-category.jpg</image:loc>
+      <image:title>Ganesh Puja Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Durga Puja -->
+  <url>
+    <loc>https://shayariwale.in/?category=durgapuja</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/durga-category.jpg</image:loc>
+      <image:title>Durga Puja Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Good Morning -->
+  <url>
+    <loc>https://shayariwale.in/?category=goodmorning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Motivation -->
+  <url>
+    <loc>https://shayariwale.in/?category=motivation</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://shayariwale.in/images/motivational-category.jpg</image:loc>
+      <image:title>Motivational Shayari in Hindi, Tamil, English, Marathi, Gujarati</image:title>
+    </image:image>
+  </url>
+
+  <!-- Breakup -->
+  <url>
+    <loc>https://shayariwale.in/?category=breakup</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Islamic -->
+  <url>
+    <loc>https://shayariwale.in/?category=islamic</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ═══ STATIC PAGES ═══ -->
+
+  <url>
+    <loc>https://shayariwale.in/about-us.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://shayariwale.in/privacy-policy.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://shayariwale.in/terms-of-service.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://shayariwale.in/content-guidelines.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
